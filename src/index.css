@@ -93,8 +93,16 @@ button {
 
 /* ── Layout ── */
 .container {
-  width: var(--container);
+  width: 100%;
+  max-width: 1160px;
   margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
 }
 
 /* ============================================================
