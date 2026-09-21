@@ -167,8 +167,9 @@ export default function Footer({ navigateTo }) {
               Our Services
             </a>
           </div>
-          <p>
-            Copyright © {currentYear} EXPRADO TRADING & CONTRACTING CO. All rights reserved.
+          <p style={{ textAlign: "inherit" }}>
+            Copyright © {currentYear} EXPRADO TRADING & CONTRACTING CO. All rights reserved.<br/>
+            Designed & Developed by <a href="https://skillspot.in" target="_blank" rel="noopener noreferrer" style={{ color: "var(--gold)", fontWeight: "600" }}>skillspot.in</a>
           </p>
         </div>
       </div>
