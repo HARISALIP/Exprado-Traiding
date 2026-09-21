@@ -1289,7 +1289,7 @@ button {
 
 .cta-contact-item-text strong {
   display: block;
-  color: white;
+  color: var(--navy);
   font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 0.05em;
@@ -1298,7 +1298,7 @@ button {
 }
 
 .cta-contact-item-text span {
-  color: rgba(255,255,255,0.8);
+  color: var(--muted);
   font-size: 1rem;
   font-weight: 500;
 }
