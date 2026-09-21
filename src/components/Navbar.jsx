@@ -89,7 +89,15 @@ export default function Navbar({ navigateTo }) {
             className="menu-toggle"
             aria-expanded={isOpen}
             aria-label={isOpen ? "Close menu" : "Open menu"}
-            onClick={() => setIsOpen((v) => !v)}
+            onClick={() => {
+              if (!isOpen) {
+                setIsOpen(true);
+                setIsDropdownOpen(true);
+                setShowMoreServices(true);
+              } else {
+                setIsOpen(false);
+              }
+            }}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
