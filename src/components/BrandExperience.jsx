@@ -15,9 +15,6 @@ export default function BrandExperience() {
             overflow: "hidden",
           }}
         >
-          {/* Top accent bar */}
-          <div style={{ height: "5px", background: "linear-gradient(90deg, var(--navy) 0%, var(--gold) 100%)" }} />
-
           <div style={{ padding: "4rem 3.5rem", textAlign: "center" }}>
             <span className="eyebrow" style={{ color: "var(--gold)" }}>
               WHO WE ARE
