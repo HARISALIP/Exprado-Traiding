@@ -32,14 +32,14 @@ export default function SafetySection() {
   return (
     <section
       className="section"
-      style={{ background: "linear-gradient(135deg, var(--navy-dark), var(--navy))", padding: "6rem 0" }}
+      style={{ background: "var(--surface)", padding: "6rem 0" }}
     >
       <div className="container">
         <SectionHeading
           eyebrow="Safety & Quality"
           title="Safety is Our Foundation"
           description="We place strong emphasis on site safety across all divisions. Every project is planned and executed with safety at the core."
-          light={true}
+          light={false}
         />
 
         <div className="safety-grid">
@@ -62,16 +62,16 @@ export default function SafetySection() {
           style={{
             marginTop: "3.5rem",
             padding: "2rem",
-            background: "rgba(255,255,255,0.05)",
+            background: "white",
             borderRadius: "16px",
-            border: "1px dashed rgba(255,255,255,0.2)",
+            border: "1px dashed var(--border)",
             textAlign: "center",
           }}
         >
           <p
             style={{
               margin: 0,
-              color: "rgba(255,255,255,0.5)",
+              color: "var(--muted)",
               fontSize: "0.875rem",
               fontStyle: "italic",
             }}

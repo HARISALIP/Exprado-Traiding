@@ -3,7 +3,7 @@ import SectionHeading from "./SectionHeading";
 
 export default function WhyChooseUs() {
   return (
-    <section className="section section-dark" style={{ background: "var(--navy)", padding: "6rem 0" }}>
+    <section className="section" style={{ background: "white", padding: "6rem 0" }}>
       <div className="container">
         <div className="why-grid">
           {/* Left: text content */}
@@ -15,7 +15,7 @@ export default function WhyChooseUs() {
               style={{
                 fontFamily: "'Barlow', 'Inter', sans-serif",
                 fontSize: "clamp(2rem, 4vw, 3rem)",
-                color: "white",
+                color: "var(--navy)",
                 marginBottom: "1.5rem",
                 lineHeight: "1.1",
                 fontWeight: "900",
@@ -28,7 +28,7 @@ export default function WhyChooseUs() {
             </h2>
             <p
               style={{
-                color: "rgba(255,255,255,0.75)",
+                color: "var(--muted)",
                 marginBottom: "2.5rem",
                 fontSize: "1.05rem",
                 lineHeight: "1.7",
