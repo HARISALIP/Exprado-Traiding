@@ -68,7 +68,7 @@ export default function Hero({ navigateTo }) {
               Future
             </h1>
             <p className="hero-description">
-              Engineering, civil construction, electro-mechanical, and industrial trading
+              <strong>EXPRADO TRADING &amp; CONTRACTING CO.</strong> provides engineering, civil construction, electro-mechanical, and industrial trading
               solutions delivered across the Kingdom of Saudi Arabia. Aligned with Saudi Vision 2030.
             </p>
 
