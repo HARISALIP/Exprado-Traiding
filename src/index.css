@@ -645,7 +645,7 @@ button {
 .hero-title {
   margin: 0 0 1.25rem;
   font-family: "Barlow", "Inter", sans-serif;
-  font-size: clamp(2.6rem, 7vw, 5.2rem);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
   line-height: 1.05;
   text-transform: uppercase;
   color: var(--white);
@@ -828,7 +828,7 @@ button {
   margin: 0;
   font-family: "Barlow", "Inter", sans-serif;
   color: var(--navy);
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   line-height: 1.05;
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -1085,7 +1085,7 @@ button {
 .stat-item-bar strong {
   display: block;
   font-family: "Barlow", sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   color: var(--gold);
   font-weight: 900;
   line-height: 1;
@@ -1244,7 +1244,7 @@ button {
 
 .cta-text-side h2 {
   font-family: "Barlow", sans-serif;
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   font-weight: 900;
   color: white;
   margin: 0 0 1.2rem;

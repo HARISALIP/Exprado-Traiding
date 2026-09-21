@@ -22,7 +22,7 @@ export default function BrandExperience() {
             <h2
               style={{
                 fontFamily: "'Barlow', 'Inter', sans-serif",
-                fontSize: "clamp(2rem, 4vw, 3rem)",
+                fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
                 color: "var(--navy)",
                 marginBottom: "1.5rem",
                 lineHeight: "1.1",
