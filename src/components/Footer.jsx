@@ -32,12 +32,12 @@ export default function Footer({ navigateTo }) {
               </div>
               <div
                 style={{
-                  fontSize: "0.6rem",
+                  fontSize: "0.65rem",
                   fontWeight: "700",
                   letterSpacing: "0.12em",
                   textTransform: "uppercase",
-                  color: "var(--muted)",
-                  marginTop: "1px",
+                  color: "var(--navy)",
+                  marginTop: "2px",
                 }}
               >
                 Trading & Contracting Co.
