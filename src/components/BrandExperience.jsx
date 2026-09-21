@@ -15,7 +15,7 @@ export default function BrandExperience() {
             overflow: "hidden",
           }}
         >
-          <div style={{ padding: "4rem 3.5rem", textAlign: "center" }}>
+          <div style={{ padding: "clamp(2.5rem, 6vw, 4rem) clamp(1.2rem, 5vw, 3.5rem)", textAlign: "center" }}>
             <span className="eyebrow" style={{ color: "var(--gold)" }}>
               WHO WE ARE
             </span>
@@ -42,10 +42,8 @@ export default function BrandExperience() {
                 margin: "0 auto 3rem",
               }}
             >
-              A <strong style={{ color: "var(--navy)" }}>100% Saudi-owned enterprise</strong> executing
-              multidisciplinary infrastructure, industrial, and commercial projects across the Kingdom of
-              Saudi Arabia. Our mission is to support KSA infrastructure development through world-class
-              civil contracting, electrical contracting, mechanical contracting, and trading solutions —
+              A <strong style={{ color: "var(--navy)" }}>100% Saudi-owned enterprise</strong> delivering world-class
+              multidisciplinary infrastructure, industrial, and commercial solutions across the Kingdom. We are committed to
               delivering <strong style={{ color: "var(--navy)" }}>100% Local Value &amp; Quality Standard</strong> aligned
               with <strong style={{ color: "var(--navy)" }}>Saudi Vision 2030</strong>.
             </p>
