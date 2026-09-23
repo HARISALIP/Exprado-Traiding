@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export default function PrivacyPolicy({ navigateTo }) {
+  const { t } = useTranslation();
   return (
     <div className="page-layout">
       <div
@@ -11,71 +14,67 @@ export default function PrivacyPolicy({ navigateTo }) {
         }}
       >
         <div className="container">
-          <p className="eyebrow" style={{ color: "var(--gold)" }}>Legal</p>
-          <h1 style={{ fontSize: "2.5rem" }}>Privacy Policy</h1>
-          <p>Last updated: {new Date().toLocaleDateString("en-GB", { year: "numeric", month: "long" })}</p>
+          <p className="eyebrow" style={{ color: "var(--gold)" }}>{t("PrivacyPolicy.headerEyebrow")}</p>
+          <h1 style={{ fontSize: "2.5rem" }}>{t("PrivacyPolicy.headerTitle")}</h1>
+          <p>{t("PrivacyPolicy.lastUpdated")} {new Date().toLocaleDateString("en-GB", { year: "numeric", month: "long" })}</p>
         </div>
       </div>
 
       <div className="policy-content">
-        <h2>1. Introduction</h2>
+        <h2>{t("PrivacyPolicy.introTitle")}</h2>
         <p>
-          EXPRADO TRADING &amp; CONTRACTING CO. ("Exprado", "we", "our", or "us") respects your privacy
-          and is committed to protecting your personal data. This privacy policy explains how we collect,
-          use, and safeguard information when you visit our website at www.exprado.com.
+          {t("PrivacyPolicy.introText")}
         </p>
 
-        <h2>2. Information We Collect</h2>
-        <p>We may collect the following types of information:</p>
+        <h2>{t("PrivacyPolicy.infoWeCollectTitle")}</h2>
+        <p>{t("PrivacyPolicy.infoWeCollectText")}</p>
         <ul>
-          <li><strong>Contact information:</strong> Name, phone number, email address when you submit an inquiry.</li>
-          <li><strong>Usage data:</strong> Information about how you interact with our website.</li>
-          <li><strong>Communication data:</strong> Messages and correspondence you send to us.</li>
+          {[0, 1, 2].map((idx) => (
+            <li key={idx}>
+              {t(`PrivacyPolicy.infoWeCollectList.${idx}`)}
+            </li>
+          ))}
         </ul>
 
-        <h2>3. How We Use Your Information</h2>
-        <p>We use the information we collect to:</p>
+        <h2>{t("PrivacyPolicy.howWeUseTitle")}</h2>
+        <p>{t("PrivacyPolicy.howWeUseText")}</p>
         <ul>
-          <li>Respond to project inquiries and quotation requests.</li>
-          <li>Communicate about our engineering and contracting services.</li>
-          <li>Improve our website and service offerings.</li>
-          <li>Comply with applicable laws and regulations in the Kingdom of Saudi Arabia.</li>
+          {[0, 1, 2, 3].map((idx) => (
+            <li key={idx}>
+              {t(`PrivacyPolicy.howWeUseList.${idx}`)}
+            </li>
+          ))}
         </ul>
 
-        <h2>4. Information Sharing</h2>
+        <h2>{t("PrivacyPolicy.infoSharingTitle")}</h2>
         <p>
-          We do not sell, trade, or transfer your personal information to third parties without your
-          consent, except where required by law or as necessary to provide our services.
+          {t("PrivacyPolicy.infoSharingText")}
         </p>
 
-        <h2>5. Data Security</h2>
+        <h2>{t("PrivacyPolicy.dataSecurityTitle")}</h2>
         <p>
-          We implement appropriate security measures to protect your personal information against
-          unauthorized access, alteration, disclosure, or destruction.
+          {t("PrivacyPolicy.dataSecurityText")}
         </p>
 
-        <h2>6. Third-Party Services</h2>
+        <h2>{t("PrivacyPolicy.thirdPartyTitle")}</h2>
         <p>
-          Our website may use third-party services such as WhatsApp for communication and analytics
-          tools. These services have their own privacy policies.
+          {t("PrivacyPolicy.thirdPartyText")}
         </p>
 
-        <h2>7. Your Rights</h2>
+        <h2>{t("PrivacyPolicy.yourRightsTitle")}</h2>
         <p>
-          You have the right to access, correct, or request deletion of your personal data. To exercise
-          these rights, please contact us via WhatsApp at {" "}
+          {t("PrivacyPolicy.yourRightsText")} {" "}
           <a href="https://wa.me/+966563189556" style={{ color: "var(--gold)" }}>+966 563189556</a>.
         </p>
 
-        <h2>8. Changes to This Policy</h2>
+        <h2>{t("PrivacyPolicy.changesTitle")}</h2>
         <p>
-          We may update this privacy policy from time to time. Any changes will be posted on this page
-          with an updated date.
+          {t("PrivacyPolicy.changesText")}
         </p>
 
-        <h2>9. Contact</h2>
+        <h2>{t("PrivacyPolicy.contactTitle")}</h2>
         <p>
-          If you have questions about this privacy policy, please contact:
+          {t("PrivacyPolicy.contactText")}
           <br />
           <strong>EXPRADO TRADING &amp; CONTRACTING CO.</strong>
           <br />

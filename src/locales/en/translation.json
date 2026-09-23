@@ -323,5 +323,67 @@
     "chatOnWhatsapp": "Chat on WhatsApp",
     "location": "Location",
     "mapPlaceholder": "[Google Maps Location Placeholder — Add office address to embed map]"
+  },
+  "PrivacyPolicy": {
+    "headerEyebrow": "Legal",
+    "headerTitle": "Privacy Policy",
+    "lastUpdated": "Last updated:",
+    "introTitle": "1. Introduction",
+    "introText": "EXPRADO TRADING & CONTRACTING CO. (\"Exprado\", \"we\", \"our\", or \"us\") respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard information when you visit our website at www.exprado.com.",
+    "infoWeCollectTitle": "2. Information We Collect",
+    "infoWeCollectText": "We may collect the following types of information:",
+    "infoWeCollectList": [
+      "Contact information: Name, phone number, email address when you submit an inquiry.",
+      "Usage data: Information about how you interact with our website.",
+      "Communication data: Messages and correspondence you send to us."
+    ],
+    "howWeUseTitle": "3. How We Use Your Information",
+    "howWeUseText": "We use the information we collect to:",
+    "howWeUseList": [
+      "Respond to project inquiries and quotation requests.",
+      "Communicate about our engineering and contracting services.",
+      "Improve our website and service offerings.",
+      "Comply with applicable laws and regulations in the Kingdom of Saudi Arabia."
+    ],
+    "infoSharingTitle": "4. Information Sharing",
+    "infoSharingText": "We do not sell, trade, or transfer your personal information to third parties without your consent, except where required by law or as necessary to provide our services.",
+    "dataSecurityTitle": "5. Data Security",
+    "dataSecurityText": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
+    "thirdPartyTitle": "6. Third-Party Services",
+    "thirdPartyText": "Our website may use third-party services such as WhatsApp for communication and analytics tools. These services have their own privacy policies.",
+    "yourRightsTitle": "7. Your Rights",
+    "yourRightsText": "You have the right to access, correct, or request deletion of your personal data. To exercise these rights, please contact us via WhatsApp at",
+    "changesTitle": "8. Changes to This Policy",
+    "changesText": "We may update this privacy policy from time to time. Any changes will be posted on this page with an updated date.",
+    "contactTitle": "9. Contact",
+    "contactText": "If you have questions about this privacy policy, please contact:"
+  },
+  "TermsConditions": {
+    "headerEyebrow": "Legal",
+    "headerTitle": "Terms & Conditions",
+    "lastUpdated": "Last updated:",
+    "acceptanceTitle": "1. Acceptance of Terms",
+    "acceptanceText": "By accessing and using the website of EXPRADO TRADING & CONTRACTING CO. (\"Exprado\", \"we\", \"our\", or \"us\"), you accept and agree to be bound by these terms and conditions. If you do not agree to these terms, please do not use our website.",
+    "useOfWebsiteTitle": "2. Use of Website",
+    "useOfWebsiteText": "This website is provided for informational purposes about our engineering and contracting services. You agree to:",
+    "useOfWebsiteList": [
+      "Use the website only for lawful purposes.",
+      "Not attempt to disrupt or damage the website or its services.",
+      "Not misrepresent your identity when submitting inquiries."
+    ],
+    "servicesInfoTitle": "3. Services Information",
+    "servicesInfoText": "Information about our service divisions — including civil construction, electrical & instrumentation, mechanical fabrication, asphalt paving, scaffolding, waterproofing, equipment logistics, and technical manpower — is provided for general information only. Specific project terms, pricing, and scope will be agreed upon separately through formal contracts and quotations.",
+    "intellectualPropertyTitle": "4. Intellectual Property",
+    "intellectualPropertyText": "All content on this website, including text, graphics, and design elements, is the property of EXPRADO TRADING & CONTRACTING CO. and may not be reproduced without permission.",
+    "inquiriesTitle": "5. Inquiries and Quotations",
+    "inquiriesText": "Submitting an inquiry through our website or WhatsApp does not constitute a binding contract. All project engagements are subject to formal agreements executed between Exprado and the client.",
+    "limitationTitle": "6. Limitation of Liability",
+    "limitationText": "Exprado shall not be liable for any indirect, incidental, or consequential damages arising from the use of this website or reliance on information contained herein.",
+    "governingLawTitle": "7. Governing Law",
+    "governingLawText": "These terms are governed by the laws of the Kingdom of Saudi Arabia. Any disputes will be resolved in accordance with applicable Saudi law.",
+    "changesTitle": "8. Changes to Terms",
+    "changesText": "We reserve the right to modify these terms at any time. Continued use of the website following any changes constitutes acceptance of the updated terms.",
+    "contactTitle": "9. Contact",
+    "contactText": "For any questions regarding these terms, please contact:"
   }
 }
