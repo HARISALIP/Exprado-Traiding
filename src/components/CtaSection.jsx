@@ -1,8 +1,10 @@
 import { ArrowRight, Phone, Globe, Mail, User } from "lucide-react";
 import { contactInfo } from "../assets/siteData";
 import { WhatsAppIconSVG } from "./Icons";
+import { useTranslation } from "react-i18next";
 
 export default function CtaSection({ navigateTo }) {
+  const { t } = useTranslation();
   const whatsappUrl = `https://wa.me/${contactInfo.whatsapp}?text=${encodeURIComponent(
     "Hello, I would like to get a quote from EXPRADO TRADING & CONTRACTING CO."
   )}`;
@@ -17,15 +19,13 @@ export default function CtaSection({ navigateTo }) {
           {/* Left: CTA text */}
           <div className="cta-text-side">
             <p className="eyebrow" style={{ color: "var(--gold)", marginBottom: "1rem", letterSpacing: "0.2em" }}>
-              START YOUR PROJECT
+              {t("CtaSection.eyebrow")}
             </p>
             <h2>
-              Ready to Build with Exprado?
+              {t("CtaSection.title")}
             </h2>
             <p>
-              Contact our team today for project inquiries, quotations, or to learn more about our
-              8 integrated service divisions across KSA. We are committed to delivering
-              100% Local Value & Quality Standard.
+              {t("CtaSection.description")}
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <a
@@ -35,13 +35,13 @@ export default function CtaSection({ navigateTo }) {
                 className="button button-primary button-large"
               >
                 <WhatsAppIconSVG size={20} />
-                WhatsApp Us
+                {t("CtaSection.whatsappUs")}
               </a>
               <button
                 onClick={() => navigateTo("contact")}
                 className="button button-secondary button-large"
               >
-                Contact Page <ArrowRight size={18} className="icon-move" />
+                {t("CtaSection.contactPage")} <ArrowRight size={18} className="icon-move" />
               </button>
             </div>
           </div>
@@ -53,7 +53,7 @@ export default function CtaSection({ navigateTo }) {
                 <User size={22} />
               </div>
               <div className="cta-contact-item-text">
-                <strong>Lead Representative</strong>
+                <strong>{t("CtaSection.leadRepresentative")}</strong>
                 <span>
                   {contactInfo.representative} — {contactInfo.title}
                 </span>
@@ -65,7 +65,7 @@ export default function CtaSection({ navigateTo }) {
                 <Phone size={22} />
               </div>
               <div className="cta-contact-item-text">
-                <strong>Phone / WhatsApp</strong>
+                <strong>{t("CtaSection.phoneWhatsapp")}</strong>
                 <a href={`tel:${contactInfo.whatsapp}`}>{contactInfo.phone}</a>
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function CtaSection({ navigateTo }) {
                 <Globe size={22} />
               </div>
               <div className="cta-contact-item-text">
-                <strong>Website</strong>
+                <strong>{t("CtaSection.website")}</strong>
                 <a
                   href={`https://${contactInfo.website}`}
                   target="_blank"
@@ -91,7 +91,7 @@ export default function CtaSection({ navigateTo }) {
                 <Mail size={22} />
               </div>
               <div className="cta-contact-item-text">
-                <strong>Email</strong>
+                <strong>{t("CtaSection.email")}</strong>
                 <span style={{ color: "rgba(255,255,255,0.4)", fontStyle: "italic" }}>
                   {contactInfo.email}
                 </span>

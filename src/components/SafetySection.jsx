@@ -1,5 +1,6 @@
 import { ShieldCheck, HardHat, AlertTriangle, ClipboardCheck } from "lucide-react";
 import SectionHeading from "./SectionHeading";
+import { useTranslation } from "react-i18next";
 
 const safetyPoints = [
   {
@@ -29,6 +30,7 @@ const safetyPoints = [
 ];
 
 export default function SafetySection() {
+  const { t } = useTranslation();
   return (
     <section
       className="section"
@@ -36,9 +38,9 @@ export default function SafetySection() {
     >
       <div className="container">
         <SectionHeading
-          eyebrow="Safety & Quality"
-          title="Safety is Our Foundation"
-          description="We place strong emphasis on site safety across all divisions. Every project is planned and executed with safety at the core."
+          eyebrow={t("SafetySection.eyebrow")}
+          title={t("SafetySection.title")}
+          description={t("SafetySection.description")}
           light={false}
         />
 
@@ -50,8 +52,8 @@ export default function SafetySection() {
                 <div className="safety-icon">
                   <Icon size={28} />
                 </div>
-                <h4>{item.title}</h4>
-                <p>{item.description}</p>
+                <h4>{t(`SafetySection.points.${idx}.title`)}</h4>
+                <p>{t(`SafetySection.points.${idx}.description`)}</p>
               </div>
             );
           })}
@@ -76,7 +78,7 @@ export default function SafetySection() {
               fontStyle: "italic",
             }}
           >
-            [Certification / Accreditation Placeholder — Add official certifications when available]
+            {t("SafetySection.certificationPlaceholder")}
           </p>
         </div>
       </div>

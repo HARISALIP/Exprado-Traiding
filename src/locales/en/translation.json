@@ -198,5 +198,40 @@
         "desc": "Aligned & Contributing"
       }
     ]
+  },
+  "SafetySection": {
+    "eyebrow": "Safety & Quality",
+    "title": "Safety is Our Foundation",
+    "description": "We place strong emphasis on site safety across all divisions. Every project is planned and executed with safety at the core.",
+    "certificationPlaceholder": "[Certification / Accreditation Placeholder — Add official certifications when available]",
+    "points": [
+      {
+        "title": "Strict Site Safety Standards",
+        "description": "All service divisions operate under strict site safety protocols, ensuring worker protection and regulatory compliance on every project."
+      },
+      {
+        "title": "Certified Scaffold Inspection",
+        "description": "Our Scaffolding & Structural Support division provides certified scaffold inspection services, confirming structural integrity before and during use."
+      },
+      {
+        "title": "Safety-Focused Operations",
+        "description": "Safety is embedded in every aspect of our operations — from equipment logistics to electrical installations and civil earthworks."
+      },
+      {
+        "title": "Compliance-Driven Delivery",
+        "description": "Projects are executed in accordance with applicable KSA regulations and industry standards across all 8 service divisions."
+      }
+    ]
+  },
+  "CtaSection": {
+    "eyebrow": "START YOUR PROJECT",
+    "title": "Ready to Build with Exprado?",
+    "description": "Contact our team today for project inquiries, quotations, or to learn more about our 8 integrated service divisions across KSA. We are committed to delivering 100% Local Value & Quality Standard.",
+    "whatsappUs": "WhatsApp Us",
+    "contactPage": "Contact Page",
+    "leadRepresentative": "Lead Representative",
+    "phoneWhatsapp": "Phone / WhatsApp",
+    "website": "Website",
+    "email": "Email"
   }
 }
