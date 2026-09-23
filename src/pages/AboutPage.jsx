@@ -1,6 +1,8 @@
 import { CheckCircle, Target, Globe, Award, Users, ShieldCheck } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function AboutPage({ navigateTo }) {
+  const { t } = useTranslation();
   return (
     <div className="page-layout">
       {/* Page header */}
@@ -18,12 +20,11 @@ export default function AboutPage({ navigateTo }) {
       >
         <div className="container">
           <p className="eyebrow" style={{ color: "var(--gold)", marginBottom: "0.6rem" }}>
-            Our Story
+            {t("AboutPage.headerEyebrow")}
           </p>
-          <h1>About EXPRADO</h1>
+          <h1>{t("AboutPage.headerTitle")}</h1>
           <p>
-            A 100% Saudi-owned engineering and contracting enterprise delivering
-            multidisciplinary project solutions across the Kingdom of Saudi Arabia.
+            {t("AboutPage.headerDescription")}
           </p>
         </div>
       </div>
@@ -52,12 +53,10 @@ export default function AboutPage({ navigateTo }) {
                 <Target size={30} />
               </div>
               <h3 style={{ fontSize: "1.7rem", color: "var(--navy)", marginBottom: "1rem", fontWeight: "800" }}>
-                Our Mission
+                {t("AboutPage.missionTitle")}
               </h3>
               <p style={{ color: "var(--muted)", lineHeight: "1.75", fontSize: "1rem" }}>
-                To support KSA infrastructure development through world-class civil contracting,
-                electrical contracting, mechanical contracting, and industrial trading solutions —
-                delivering 100% Local Value &amp; Quality Standard in alignment with Saudi Vision 2030.
+                {t("AboutPage.missionDescription")}
               </p>
             </div>
 
@@ -85,12 +84,10 @@ export default function AboutPage({ navigateTo }) {
                 <Globe size={30} />
               </div>
               <h3 style={{ fontSize: "1.7rem", color: "var(--navy)", marginBottom: "1rem", fontWeight: "800" }}>
-                Our Vision
+                {t("AboutPage.visionTitle")}
               </h3>
               <p style={{ color: "var(--muted)", lineHeight: "1.75", fontSize: "1rem" }}>
-                To become a leading Saudi-owned contracting enterprise recognized for engineering
-                excellence, multidisciplinary capability, and a strong commitment to the Kingdom's
-                infrastructure growth and economic development objectives.
+                {t("AboutPage.visionDescription")}
               </p>
             </div>
           </div>
@@ -142,7 +139,7 @@ export default function AboutPage({ navigateTo }) {
 
             <div>
               <span className="eyebrow" style={{ color: "var(--gold)" }}>
-                WHO WE ARE
+                {t("AboutPage.whoWeAreEyebrow")}
               </span>
               <h2
                 style={{
@@ -154,35 +151,25 @@ export default function AboutPage({ navigateTo }) {
                   fontWeight: "900",
                 }}
               >
-                EXPRADO TRADING &amp; CONTRACTING CO.
+                {t("AboutPage.whoWeAreTitle")}
               </h2>
               <p style={{ color: "var(--muted)", marginBottom: "1.5rem", fontSize: "1.05rem", lineHeight: "1.8" }}>
-                A <strong>100% Saudi-owned enterprise</strong> executing multidisciplinary
-                infrastructure, industrial, and commercial projects across the Kingdom of
-                Saudi Arabia. We bring together eight integrated service divisions under one
-                responsible contractor, delivering engineering and contracting solutions
-                built on <strong>10+ years of expertise</strong>.
+                {t("AboutPage.whoWeAreDesc1Part1")}
+                <strong>{t("AboutPage.whoWeAreDesc1Strong")}</strong>
+                {t("AboutPage.whoWeAreDesc1Part2")}
+                <strong>{t("AboutPage.whoWeAreDesc1Strong2")}</strong>
+                {t("AboutPage.whoWeAreDesc1Part3")}
               </p>
               <p style={{ color: "var(--muted)", marginBottom: "2.5rem", fontSize: "1.05rem", lineHeight: "1.8" }}>
-                Our integrated approach spans civil construction, electrical and instrumentation,
-                mechanical fabrication, asphalt paving, scaffolding, waterproofing, equipment
-                logistics, and technical manpower — giving our clients a single point of
-                accountability across the entire project lifecycle.
+                {t("AboutPage.whoWeAreDesc2")}
               </p>
 
               <div
                 style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}
               >
-                {[
-                  "100% Saudi Owned",
-                  "10+ Years Expertise",
-                  "Vision 2030 Aligned",
-                  "8 Service Divisions",
-                  "Safety-First Culture",
-                  "Kingdom-Wide Operations",
-                ].map((item) => (
+                {[0, 1, 2, 3, 4, 5].map((idx) => (
                   <div
-                    key={item}
+                    key={idx}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -193,7 +180,7 @@ export default function AboutPage({ navigateTo }) {
                     }}
                   >
                     <CheckCircle size={18} color="var(--gold)" />
-                    {item}
+                    {t(`AboutPage.whoWeAreFeatures.${idx}`)}
                   </div>
                 ))}
               </div>
@@ -207,7 +194,7 @@ export default function AboutPage({ navigateTo }) {
         <div className="container" style={{ padding: "0 2rem" }}>
           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
             <span className="eyebrow" style={{ color: "var(--gold)" }}>
-              OUR CORE VALUES
+              {t("AboutPage.valuesEyebrow")}
             </span>
             <h2
               style={{
@@ -219,44 +206,22 @@ export default function AboutPage({ navigateTo }) {
                 letterSpacing: "-0.02em",
               }}
             >
-              The EXPRADO Promise
+              {t("AboutPage.valuesTitle")}
             </h2>
           </div>
 
           <div className="about-values-grid">
-            {[
-              {
-                icon: Award,
-                title: "Local Excellence",
-                desc: "We are a 100% Saudi-owned company committed to delivering exceptional quality that upholds the Kingdom's engineering standards.",
-              },
-              {
-                icon: ShieldCheck,
-                title: "Safety First",
-                desc: "Safety is embedded in every operation — from certified scaffold inspection to safe electrical installations and earthworks.",
-              },
-              {
-                icon: Users,
-                title: "Multidisciplinary",
-                desc: "Eight integrated service divisions ensure seamless project delivery from foundation to finish under one contractor.",
-              },
-              {
-                icon: Globe,
-                title: "Vision 2030 Aligned",
-                desc: "We support the Kingdom's infrastructure growth mission, contributing to Saudi Vision 2030 through quality contracting.",
-              },
-            ].map((val) => {
-              const Icon = val.icon;
+            {[Award, ShieldCheck, Users, Globe].map((Icon, idx) => {
               return (
-                <div key={val.title} className="value-card">
+                <div key={idx} className="value-card">
                   <div className="value-icon">
                     <Icon size={44} color="var(--gold)" />
                   </div>
                   <h4 style={{ fontSize: "1.3rem", marginBottom: "0.75rem", color: "var(--navy)", fontWeight: "800" }}>
-                    {val.title}
+                    {t(`AboutPage.values.${idx}.title`)}
                   </h4>
                   <p style={{ opacity: 0.8, fontSize: "0.95rem", lineHeight: "1.7", color: "var(--muted)", margin: 0 }}>
-                    {val.desc}
+                    {t(`AboutPage.values.${idx}.desc`)}
                   </p>
                 </div>
               );

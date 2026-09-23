@@ -243,5 +243,50 @@
     "ctaDescription": "Contact our team for a consultation or project quotation across any of our 8 service divisions.",
     "contactUs": "Contact Us",
     "whatsappInquiry": "WhatsApp Inquiry"
+  },
+  "AboutPage": {
+    "headerEyebrow": "Our Story",
+    "headerTitle": "About EXPRADO",
+    "headerDescription": "A 100% Saudi-owned engineering and contracting enterprise delivering multidisciplinary project solutions across the Kingdom of Saudi Arabia.",
+    "missionTitle": "Our Mission",
+    "missionDescription": "To support KSA infrastructure development through world-class civil contracting, electrical contracting, mechanical contracting, and industrial trading solutions — delivering 100% Local Value & Quality Standard in alignment with Saudi Vision 2030.",
+    "visionTitle": "Our Vision",
+    "visionDescription": "To become a leading Saudi-owned contracting enterprise recognized for engineering excellence, multidisciplinary capability, and a strong commitment to the Kingdom's infrastructure growth and economic development objectives.",
+    "whoWeAreEyebrow": "WHO WE ARE",
+    "whoWeAreTitle": "EXPRADO TRADING & CONTRACTING CO.",
+    "whoWeAreDesc1Part1": "A ",
+    "whoWeAreDesc1Strong": "100% Saudi-owned enterprise",
+    "whoWeAreDesc1Part2": " executing multidisciplinary infrastructure, industrial, and commercial projects across the Kingdom of Saudi Arabia. We bring together eight integrated service divisions under one responsible contractor, delivering engineering and contracting solutions built on ",
+    "whoWeAreDesc1Strong2": "10+ years of expertise",
+    "whoWeAreDesc1Part3": ".",
+    "whoWeAreDesc2": "Our integrated approach spans civil construction, electrical and instrumentation, mechanical fabrication, asphalt paving, scaffolding, waterproofing, equipment logistics, and technical manpower — giving our clients a single point of accountability across the entire project lifecycle.",
+    "whoWeAreFeatures": [
+      "100% Saudi Owned",
+      "10+ Years Expertise",
+      "Vision 2030 Aligned",
+      "8 Service Divisions",
+      "Safety-First Culture",
+      "Kingdom-Wide Operations"
+    ],
+    "valuesEyebrow": "OUR CORE VALUES",
+    "valuesTitle": "The EXPRADO Promise",
+    "values": [
+      {
+        "title": "Local Excellence",
+        "desc": "We are a 100% Saudi-owned company committed to delivering exceptional quality that upholds the Kingdom's engineering standards."
+      },
+      {
+        "title": "Safety First",
+        "desc": "Safety is embedded in every operation — from certified scaffold inspection to safe electrical installations and earthworks."
+      },
+      {
+        "title": "Multidisciplinary",
+        "desc": "Eight integrated service divisions ensure seamless project delivery from foundation to finish under one contractor."
+      },
+      {
+        "title": "Vision 2030 Aligned",
+        "desc": "We support the Kingdom's infrastructure growth mission, contributing to Saudi Vision 2030 through quality contracting."
+      }
+    ]
   }
 }
