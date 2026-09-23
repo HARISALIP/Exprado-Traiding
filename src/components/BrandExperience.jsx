@@ -1,6 +1,8 @@
 import SectionHeading from "./SectionHeading";
+import { useTranslation } from "react-i18next";
 
 export default function BrandExperience() {
+  const { t } = useTranslation();
   return (
     <section id="about" className="section section-muted" style={{ padding: "6rem 0" }}>
       <div className="container">
@@ -17,7 +19,7 @@ export default function BrandExperience() {
         >
           <div style={{ padding: "clamp(2.5rem, 6vw, 4rem) clamp(1.2rem, 5vw, 3.5rem)", textAlign: "center" }}>
             <span className="eyebrow" style={{ color: "var(--gold)" }}>
-              WHO WE ARE
+              {t("BrandExperience.eyebrow")}
             </span>
             <h2
               style={{
@@ -30,7 +32,7 @@ export default function BrandExperience() {
                 letterSpacing: "-0.02em",
               }}
             >
-              EXPRADO TRADING &amp; CONTRACTING CO.
+              {t("BrandExperience.title")}
             </h2>
             <p
               style={{
@@ -42,10 +44,13 @@ export default function BrandExperience() {
                 margin: "0 auto 3rem",
               }}
             >
-              A <strong style={{ color: "var(--navy)" }}>100% Saudi-owned enterprise</strong> delivering world-class
-              multidisciplinary infrastructure, industrial, and commercial solutions across the Kingdom. We are committed to
-              delivering <strong style={{ color: "var(--navy)" }}>100% Local Value &amp; Quality Standard</strong> aligned
-              with <strong style={{ color: "var(--navy)" }}>Saudi Vision 2030</strong>.
+              {t("BrandExperience.descriptionPart1")}
+              <strong style={{ color: "var(--navy)" }}>{t("BrandExperience.descriptionStrong1")}</strong>
+              {t("BrandExperience.descriptionPart2")}
+              <strong style={{ color: "var(--navy)" }}>{t("BrandExperience.descriptionStrong2")}</strong>
+              {t("BrandExperience.descriptionPart3")}
+              <strong style={{ color: "var(--navy)" }}>{t("BrandExperience.descriptionStrong3")}</strong>
+              {t("BrandExperience.descriptionPart4")}
             </p>
 
             {/* Three pillars */}
@@ -95,7 +100,7 @@ export default function BrandExperience() {
                       letterSpacing: "-0.02em",
                     }}
                   >
-                    {pillar.label}
+                    {t(`BrandExperience.pillars.${idx}.label`)}
                   </span>
                   <span
                     style={{
@@ -106,7 +111,7 @@ export default function BrandExperience() {
                       color: "var(--muted)",
                     }}
                   >
-                    {pillar.desc}
+                    {t(`BrandExperience.pillars.${idx}.desc`)}
                   </span>
                 </div>
               ))}

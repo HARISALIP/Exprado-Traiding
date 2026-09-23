@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { serviceItems } from "../assets/siteData";
 import SectionHeading from "./SectionHeading";
+import { useTranslation } from "react-i18next";
 
 export default function Services({ navigateTo }) {
+  const { t } = useTranslation();
   const [showMore, setShowMore] = useState(false);
 
   const displayedItems = showMore ? serviceItems : serviceItems.slice(0, 6);
@@ -12,9 +14,9 @@ export default function Services({ navigateTo }) {
     <section id="services" className="section section-light">
       <div className="container">
         <SectionHeading
-          eyebrow="8 Service Divisions"
-          title="Our Services"
-          description="Comprehensive engineering and contracting solutions spanning civil construction, electro-mechanical, industrial trading, and beyond — all under one company."
+          eyebrow={t("Services.eyebrow")}
+          title={t("Services.title")}
+          description={t("Services.description")}
         />
 
         <div className="services-two-col">
@@ -28,13 +30,13 @@ export default function Services({ navigateTo }) {
                     <Icon size={22} />
                   </div>
                   <div className="service-text">
-                    <div className="service-number">Division {item.division}</div>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
+                    <div className="service-number">{t("Services.division")} {item.division}</div>
+                    <h3>{t(`Services.items.${parseInt(item.division)-1}.title`)}</h3>
+                    <p>{t(`Services.items.${parseInt(item.division)-1}.description`)}</p>
                     {item.subItems && (
                       <ul className="service-sub-list">
-                        {item.subItems.slice(0, 3).map((sub) => (
-                          <li key={sub}>{sub}</li>
+                        {[0, 1, 2].map((subIdx) => (
+                          <li key={subIdx}>{t(`Services.items.${parseInt(item.division)-1}.subItems.${subIdx}`)}</li>
                         ))}
                       </ul>
                     )}
@@ -54,13 +56,13 @@ export default function Services({ navigateTo }) {
                     <Icon size={22} />
                   </div>
                   <div className="service-text">
-                    <div className="service-number">Division {item.division}</div>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
+                    <div className="service-number">{t("Services.division")} {item.division}</div>
+                    <h3>{t(`Services.items.${parseInt(item.division)-1}.title`)}</h3>
+                    <p>{t(`Services.items.${parseInt(item.division)-1}.description`)}</p>
                     {item.subItems && (
                       <ul className="service-sub-list">
-                        {item.subItems.slice(0, 3).map((sub) => (
-                          <li key={sub}>{sub}</li>
+                        {[0, 1, 2].map((subIdx) => (
+                          <li key={subIdx}>{t(`Services.items.${parseInt(item.division)-1}.subItems.${subIdx}`)}</li>
                         ))}
                       </ul>
                     )}
@@ -78,7 +80,7 @@ export default function Services({ navigateTo }) {
             onClick={() => setShowMore(!showMore)}
             style={{ minWidth: "180px" }}
           >
-            {showMore ? "View Less ▲" : "View All Services ▼"}
+            {showMore ? t("Services.viewLess") : t("Services.viewAll")}
           </button>
           {navigateTo && (
             <button
@@ -86,7 +88,7 @@ export default function Services({ navigateTo }) {
               onClick={() => navigateTo("services")}
               style={{ minWidth: "180px" }}
             >
-              Full Services Page →
+              {t("Services.fullServicesPage")}
             </button>
           )}
         </div>

@@ -90,5 +90,113 @@
       { "label": "Service Divisions" },
       { "label": "Kingdom-Wide Operations" }
     ]
+  },
+  "Services": {
+    "eyebrow": "8 Service Divisions",
+    "title": "Our Services",
+    "description": "Comprehensive engineering and contracting solutions spanning civil construction, electro-mechanical, industrial trading, and beyond — all under one company.",
+    "division": "Division",
+    "viewLess": "View Less ▲",
+    "viewAll": "View All Services ▼",
+    "fullServicesPage": "Full Services Page →",
+    "items": [
+      {
+        "title": "Civil Construction & Infrastructure",
+        "description": "Delivering robust civil works from residential and commercial buildings to industrial foundations across KSA.",
+        "subItems": [
+          "Residential & Commercial Construction",
+          "Industrial Foundations & Earthworks",
+          "Structural Concrete Work"
+        ]
+      },
+      {
+        "title": "Electrical & Instrumentation (E&I)",
+        "description": "Comprehensive electrical and instrumentation solutions for industrial and commercial facilities.",
+        "subItems": [
+          "Power Distribution Systems",
+          "Process Instrumentation",
+          "Facility Lighting & Earthing"
+        ]
+      },
+      {
+        "title": "Mechanical & Steel Fabrication",
+        "description": "Structural steel erection, industrial piping, HVAC, and mechanical plant support services.",
+        "subItems": [
+          "Structural Steel Erection",
+          "Industrial Piping & HVAC",
+          "Custom Equipment Installation"
+        ]
+      },
+      {
+        "title": "Asphalt & Paving Contracting",
+        "description": "Highway paving, industrial yard surfacing, and surface maintenance across the Kingdom.",
+        "subItems": [
+          "Highway & Main Road Paving",
+          "Industrial Parking & Yard Surfacing",
+          "Surface Maintenance & Resurfacing"
+        ]
+      },
+      {
+        "title": "Scaffolding & Structural Support",
+        "description": "Safe, certified scaffolding systems for high-rise and industrial sites, built around strict site safety standards.",
+        "subItems": [
+          "System Scaffolding Supply & Assembly",
+          "High-Rise & Industrial Support",
+          "Certified Scaffold Inspection"
+        ]
+      },
+      {
+        "title": "Waterproofing",
+        "description": "Complete waterproofing solutions from wet areas and basements to foundations and crack repairs.",
+        "subItems": [
+          "Toilet & Wet Area Waterproofing",
+          "Basement & Foundation Waterproofing",
+          "Expansion Joint Treatment"
+        ]
+      },
+      {
+        "title": "Equipment & Logistics Support",
+        "description": "Heavy machinery fleet and flexible project logistics supporting complex construction operations.",
+        "subItems": [
+          "Excavators, Wheel Loaders & Dozers",
+          "Rollers, Mobile Cranes & Trailers",
+          "Site Haulage & Flexible Logistics"
+        ]
+      },
+      {
+        "title": "Technical Manpower & Trading",
+        "description": "Certified technical personnel across all disciplines, plus industrial material sourcing and trading.",
+        "subItems": [
+          "Civil, Electrical & Mechanical Engineers",
+          "Safety Officers & Skilled Labor",
+          "Construction Materials & Hardware Trading"
+        ]
+      }
+    ]
+  },
+  "BrandExperience": {
+    "eyebrow": "WHO WE ARE",
+    "title": "EXPRADO TRADING & CONTRACTING CO.",
+    "descriptionPart1": "A ",
+    "descriptionStrong1": "100% Saudi-owned enterprise",
+    "descriptionPart2": " delivering world-class multidisciplinary infrastructure, industrial, and commercial solutions across the Kingdom. We are committed to delivering ",
+    "descriptionStrong2": "100% Local Value & Quality Standard",
+    "descriptionPart3": " aligned with ",
+    "descriptionStrong3": "Saudi Vision 2030",
+    "descriptionPart4": ".",
+    "pillars": [
+      {
+        "label": "10+ Years",
+        "desc": "Engineering Expertise"
+      },
+      {
+        "label": "100% Saudi Owned",
+        "desc": "Local Value & Quality Standard"
+      },
+      {
+        "label": "Vision 2030",
+        "desc": "Aligned & Contributing"
+      }
+    ]
   }
 }
