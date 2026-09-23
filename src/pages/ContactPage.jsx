@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, Globe, Send, User } from "lucide-react";
-import { contactInfo } from "../assets/siteData";
+import { contactInfo, serviceItems } from "../assets/siteData";
 import { WhatsAppIconSVG } from "../components/Icons";
+import { useTranslation } from "react-i18next";
 
 export default function ContactPage() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -45,11 +47,11 @@ export default function ContactPage() {
       >
         <div className="container">
           <p className="eyebrow" style={{ color: "var(--gold)", marginBottom: "0.6rem" }}>
-            Get In Touch
+            {t("ContactPage.headerEyebrow")}
           </p>
-          <h1>Contact Us</h1>
+          <h1>{t("ContactPage.headerTitle")}</h1>
           <p>
-            Reach out to EXPRADO TRADING & CONTRACTING CO. for project inquiries, quotations, or general information.
+            {t("ContactPage.headerDescription")}
           </p>
         </div>
       </div>
@@ -58,46 +60,46 @@ export default function ContactPage() {
         <div className="contact-split-grid">
           {/* Form */}
           <div className="contact-form-side">
-            <h3>Send an Inquiry</h3>
+            <h3>{t("ContactPage.formTitle")}</h3>
             <form className="contact-form" onSubmit={handleSubmit}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem" }}>
                 <div className="input-field">
-                  <label>Full Name *</label>
+                  <label>{t("ContactPage.labels.fullName")}</label>
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    placeholder="Your full name"
+                    placeholder={t("ContactPage.placeholders.fullName")}
                   />
                 </div>
                 <div className="input-field">
-                  <label>Phone / WhatsApp *</label>
+                  <label>{t("ContactPage.labels.phone")}</label>
                   <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    placeholder="+966 XXXXXXXXX"
+                    placeholder={t("ContactPage.placeholders.phone")}
                   />
                 </div>
               </div>
 
               <div className="input-field">
-                <label>Email Address</label>
+                <label>{t("ContactPage.labels.email")}</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="your@email.com (optional)"
+                  placeholder={t("ContactPage.placeholders.email")}
                 />
               </div>
 
               <div className="input-field">
-                <label>Service Division *</label>
+                <label>{t("ContactPage.labels.service")}</label>
                 <select
                   name="service"
                   value={formData.service}
@@ -105,41 +107,38 @@ export default function ContactPage() {
                   required
                 >
                   <option value="" disabled>
-                    Select the service you need
+                    {t("ContactPage.placeholders.service")}
                   </option>
-                  <option value="Civil Construction & Infrastructure">Civil Construction & Infrastructure</option>
-                  <option value="Electrical & Instrumentation (E&I)">Electrical & Instrumentation (E&I)</option>
-                  <option value="Mechanical & Steel Fabrication">Mechanical & Steel Fabrication</option>
-                  <option value="Asphalt & Paving Contracting">Asphalt & Paving Contracting</option>
-                  <option value="Scaffolding & Structural Support">Scaffolding & Structural Support</option>
-                  <option value="Waterproofing">Waterproofing</option>
-                  <option value="Equipment & Logistics Support">Equipment & Logistics Support</option>
-                  <option value="Technical Manpower & Trading">Technical Manpower & Trading</option>
-                  <option value="General Inquiry">General Inquiry</option>
+                  {serviceItems.map((item, idx) => (
+                    <option key={item.title} value={item.title}>
+                      {t(`Services.items.${idx}.title`)}
+                    </option>
+                  ))}
+                  <option value="General Inquiry">{t("ContactPage.generalInquiry")}</option>
                 </select>
               </div>
 
               <div className="input-field">
-                <label>Subject *</label>
+                <label>{t("ContactPage.labels.subject")}</label>
                 <input
                   type="text"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  placeholder="e.g. Project Quotation Request"
+                  placeholder={t("ContactPage.placeholders.subject")}
                 />
               </div>
 
               <div className="input-field">
-                <label>Message *</label>
+                <label>{t("ContactPage.labels.message")}</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
                   rows="5"
-                  placeholder="Describe your project or inquiry..."
+                  placeholder={t("ContactPage.placeholders.message")}
                   style={{ resize: "vertical" }}
                 />
               </div>
@@ -154,7 +153,7 @@ export default function ContactPage() {
                   width: "100%",
                 }}
               >
-                Send via WhatsApp <Send size={18} style={{ marginLeft: "0.5rem" }} />
+                {t("ContactPage.sendViaWhatsapp")} <Send size={18} style={{ marginLeft: "0.5rem" }} />
               </button>
 
               <p
@@ -165,7 +164,7 @@ export default function ContactPage() {
                   textAlign: "center",
                 }}
               >
-                Your inquiry will be sent directly to our WhatsApp for a quick response.
+                {t("ContactPage.inquiryNote")}
               </p>
             </form>
           </div>
@@ -177,7 +176,7 @@ export default function ContactPage() {
                 <User size={22} />
               </div>
               <div className="detail-text">
-                <h4>Lead Representative</h4>
+                <h4>{t("ContactPage.details.leadRepresentative")}</h4>
                 <p>
                   <strong>{contactInfo.representative}</strong>
                   <br />
@@ -191,7 +190,7 @@ export default function ContactPage() {
                 <Phone size={22} />
               </div>
               <div className="detail-text">
-                <h4>Phone / WhatsApp</h4>
+                <h4>{t("ContactPage.details.phoneWhatsapp")}</h4>
                 <a href={`tel:${contactInfo.whatsapp}`}>{contactInfo.phone}</a>
               </div>
             </div>
@@ -201,7 +200,7 @@ export default function ContactPage() {
                 <Globe size={22} />
               </div>
               <div className="detail-text">
-                <h4>Website</h4>
+                <h4>{t("ContactPage.details.website")}</h4>
                 <a
                   href={`https://${contactInfo.website}`}
                   target="_blank"
@@ -217,7 +216,7 @@ export default function ContactPage() {
                 <Mail size={22} />
               </div>
               <div className="detail-text">
-                <h4>Email</h4>
+                <h4>{t("ContactPage.details.email")}</h4>
                 <p style={{ color: "var(--muted)", fontStyle: "italic", fontSize: "0.875rem" }}>
                   {contactInfo.email}
                 </p>
@@ -229,7 +228,7 @@ export default function ContactPage() {
                 <MapPin size={22} />
               </div>
               <div className="detail-text">
-                <h4>Office Address</h4>
+                <h4>{t("ContactPage.details.officeAddress")}</h4>
                 <p style={{ color: "var(--muted)", fontStyle: "italic", fontSize: "0.875rem" }}>
                   {contactInfo.address}
                 </p>
@@ -258,7 +257,7 @@ export default function ContactPage() {
               }}
             >
               <WhatsAppIconSVG size={22} />
-              Chat on WhatsApp
+              {t("ContactPage.chatOnWhatsapp")}
             </a>
           </div>
         </div>
@@ -267,7 +266,7 @@ export default function ContactPage() {
       {/* Map placeholder */}
       <div className="container" style={{ paddingBottom: "5rem" }}>
         <h3 style={{ fontSize: "1.6rem", color: "var(--navy)", marginBottom: "1.5rem", fontWeight: "800" }}>
-          Location
+          {t("ContactPage.location")}
         </h3>
         <div
           className="placeholder-box"
@@ -277,7 +276,7 @@ export default function ContactPage() {
             fontSize: "0.95rem",
           }}
         >
-          [Google Maps Location Placeholder — Add office address to embed map]
+          {t("ContactPage.mapPlaceholder")}
         </div>
       </div>
     </div>

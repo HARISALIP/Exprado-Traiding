@@ -288,5 +288,40 @@
         "desc": "We support the Kingdom's infrastructure growth mission, contributing to Saudi Vision 2030 through quality contracting."
       }
     ]
+  },
+  "ContactPage": {
+    "headerEyebrow": "Get In Touch",
+    "headerTitle": "Contact Us",
+    "headerDescription": "Reach out to EXPRADO TRADING & CONTRACTING CO. for project inquiries, quotations, or general information.",
+    "formTitle": "Send an Inquiry",
+    "labels": {
+      "fullName": "Full Name *",
+      "phone": "Phone / WhatsApp *",
+      "email": "Email Address",
+      "service": "Service Division *",
+      "subject": "Subject *",
+      "message": "Message *"
+    },
+    "placeholders": {
+      "fullName": "Your full name",
+      "phone": "+966 XXXXXXXXX",
+      "email": "your@email.com (optional)",
+      "service": "Select the service you need",
+      "subject": "e.g. Project Quotation Request",
+      "message": "Describe your project or inquiry..."
+    },
+    "generalInquiry": "General Inquiry",
+    "sendViaWhatsapp": "Send via WhatsApp",
+    "inquiryNote": "Your inquiry will be sent directly to our WhatsApp for a quick response.",
+    "details": {
+      "leadRepresentative": "Lead Representative",
+      "phoneWhatsapp": "Phone / WhatsApp",
+      "website": "Website",
+      "email": "Email",
+      "officeAddress": "Office Address"
+    },
+    "chatOnWhatsapp": "Chat on WhatsApp",
+    "location": "Location",
+    "mapPlaceholder": "[Google Maps Location Placeholder — Add office address to embed map]"
   }
 }
