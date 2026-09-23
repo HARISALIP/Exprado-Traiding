@@ -1,8 +1,10 @@
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, Globe } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { serviceItems } from "../assets/siteData";
 
 export default function Navbar({ navigateTo }) {
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [showMoreServices, setShowMoreServices] = useState(false);
@@ -188,10 +190,32 @@ export default function Navbar({ navigateTo }) {
           </div>
 
           <a href="#contact" onClick={() => handleNavigate("contact")}>
-            Contact
+            {t("Contact", "Contact")}
           </a>
 
-          <a
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <button 
+              type="button" 
+              className="lang-switcher"
+              style={{ 
+                background: 'transparent', 
+                border: '1px solid var(--border-color)', 
+                color: 'var(--text-primary)', 
+                padding: '0.4rem 0.8rem', 
+                borderRadius: '4px',
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: '0.5rem',
+                cursor: 'pointer',
+                fontFamily: 'inherit'
+              }}
+              onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'ar' : 'en')}
+            >
+              <Globe size={16} />
+              {i18n.language === 'en' ? 'العربية' : 'EN'}
+            </button>
+
+            <a
             href="https://wa.me/+966563189556?text=Hello%2C%20I%20am%20interested%20in%20Exprado%27s%20services."
             className="button button-primary nav-button"
             target="_blank"
@@ -200,6 +224,7 @@ export default function Navbar({ navigateTo }) {
           >
             Request Quote <ArrowRight size={17} className="icon-move" />
           </a>
+          </div>
         </div>
       </nav>
     </header>

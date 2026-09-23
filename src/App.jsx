@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Navbar from "./components/Navbar";
 import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
@@ -18,11 +19,17 @@ import TermsConditions from "./pages/TermsConditions";
  */
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     // Scroll to top on page change
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentPage]);
+
+  useEffect(() => {
+    document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
 
   const navigateTo = (page) => {
     setCurrentPage(page);
