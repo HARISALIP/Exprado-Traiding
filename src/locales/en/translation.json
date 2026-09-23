@@ -233,5 +233,15 @@
     "phoneWhatsapp": "Phone / WhatsApp",
     "website": "Website",
     "email": "Email"
+  },
+  "ServicesPage": {
+    "eyebrow": "8 Integrated Divisions",
+    "title": "Our Services",
+    "description": "Comprehensive engineering and contracting solutions across eight specialist service divisions — all delivered by a single 100% Saudi-owned enterprise.",
+    "ctaEyebrow": "GET STARTED",
+    "ctaTitle": "Need Engineering or Contracting Services?",
+    "ctaDescription": "Contact our team for a consultation or project quotation across any of our 8 service divisions.",
+    "contactUs": "Contact Us",
+    "whatsappInquiry": "WhatsApp Inquiry"
   }
 }

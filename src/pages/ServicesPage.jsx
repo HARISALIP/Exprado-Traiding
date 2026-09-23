@@ -1,8 +1,10 @@
 import { serviceItems } from "../assets/siteData";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
+import { useTranslation } from "react-i18next";
 
 export default function ServicesPage({ navigateTo }) {
+  const { t } = useTranslation();
   return (
     <div className="page-layout">
       {/* Page header */}
@@ -20,12 +22,11 @@ export default function ServicesPage({ navigateTo }) {
       >
         <div className="container">
           <p className="eyebrow" style={{ color: "var(--gold)", marginBottom: "0.6rem" }}>
-            8 Integrated Divisions
+            {t("ServicesPage.eyebrow")}
           </p>
-          <h1>Our Services</h1>
+          <h1>{t("ServicesPage.title")}</h1>
           <p>
-            Comprehensive engineering and contracting solutions across eight specialist
-            service divisions — all delivered by a single 100% Saudi-owned enterprise.
+            {t("ServicesPage.description")}
           </p>
         </div>
       </div>
@@ -43,17 +44,17 @@ export default function ServicesPage({ navigateTo }) {
                       <Icon size={28} />
                     </div>
                     <div className="division-card-title">
-                      <span>Division {item.division}</span>
-                      <h3>{item.title}</h3>
+                      <span>{t("Services.division")} {item.division}</span>
+                      <h3>{t(`Services.items.${parseInt(item.division)-1}.title`)}</h3>
                     </div>
                   </div>
                   <div className="division-card-body">
-                    <p>{item.description}</p>
+                    <p>{t(`Services.items.${parseInt(item.division)-1}.description`)}</p>
                     <div className="division-sub-items">
-                      {item.subItems.map((sub) => (
-                        <div key={sub} className="division-sub-item">
+                      {[0, 1, 2].map((subIdx) => (
+                        <div key={subIdx} className="division-sub-item">
                           <CheckCircle size={16} className="division-sub-icon" />
-                          <span>{sub}</span>
+                          <span>{t(`Services.items.${parseInt(item.division)-1}.subItems.${subIdx}`)}</span>
                         </div>
                       ))}
                     </div>
@@ -74,7 +75,7 @@ export default function ServicesPage({ navigateTo }) {
             }}
           >
             <span className="eyebrow" style={{ color: "var(--gold)" }}>
-              GET STARTED
+              {t("ServicesPage.ctaEyebrow")}
             </span>
             <h2
               style={{
@@ -86,17 +87,17 @@ export default function ServicesPage({ navigateTo }) {
                 letterSpacing: "-0.02em",
               }}
             >
-              Need Engineering or Contracting Services?
+              {t("ServicesPage.ctaTitle")}
             </h2>
             <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "2.5rem", fontSize: "1.05rem" }}>
-              Contact our team for a consultation or project quotation across any of our 8 service divisions.
+              {t("ServicesPage.ctaDescription")}
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <button
                 className="button button-primary button-large"
                 onClick={() => navigateTo("contact")}
               >
-                Contact Us <ArrowRight size={18} className="icon-move" />
+                {t("ServicesPage.contactUs")} <ArrowRight size={18} className="icon-move" />
               </button>
               <a
                 href="https://wa.me/+966563189556?text=Hello%2C%20I%20am%20interested%20in%20Exprado%27s%20services."
@@ -104,7 +105,7 @@ export default function ServicesPage({ navigateTo }) {
                 rel="noopener noreferrer"
                 className="button button-secondary button-large"
               >
-                WhatsApp Inquiry
+                {t("ServicesPage.whatsappInquiry")}
               </a>
             </div>
           </div>
