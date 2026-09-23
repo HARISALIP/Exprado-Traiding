@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, Phone } from "lucide-react";
 import { contactInfo } from "../assets/siteData";
+import { useTranslation } from "react-i18next";
 
 // Construction/engineering hero images from Unsplash (clearly labeled as reference images)
 const heroImages = [
@@ -10,6 +11,7 @@ const heroImages = [
 ];
 
 export default function Hero({ navigateTo }) {
+  const { t } = useTranslation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [inquiryData, setInquiryData] = useState({
     name: "",
@@ -57,19 +59,18 @@ export default function Hero({ navigateTo }) {
         >
           <div className="hero-copy">
             <span className="eyebrow" style={{ color: "var(--gold)", marginBottom: "1rem" }}>
-              100% Saudi Owned · 10+ Years Engineering Expertise
+              {t("Hero.eyebrow")}
             </span>
             <h1 className="hero-title">
-              Building
-              <span style={{ color: "var(--gold)" }}> KSA's</span>
+              {t("Hero.titleBuilding")}
+              <span style={{ color: "var(--gold)" }}>{t("Hero.titleKSA")}</span>
               <br />
-              Infrastructure
+              {t("Hero.titleInfrastructure")}
               <br />
-              Future
+              {t("Hero.titleFuture")}
             </h1>
             <p className="hero-description">
-              <strong>EXPRADO TRADING &amp; CONTRACTING CO.</strong> provides engineering, civil construction, electro-mechanical, and industrial trading
-              solutions delivered across the Kingdom of Saudi Arabia. Aligned with Saudi Vision 2030.
+              {t("Hero.description")}
             </p>
 
             <div className="hero-actions">
@@ -77,7 +78,7 @@ export default function Hero({ navigateTo }) {
                 className="button button-primary button-large"
                 onClick={() => navigateTo("services")}
               >
-                Explore Services <ArrowRight size={18} className="icon-move" />
+                {t("Hero.exploreServices")} <ArrowRight size={18} className="icon-move" />
               </button>
               <a
                 href={`https://wa.me/${contactInfo.whatsapp}?text=${encodeURIComponent("Hello, I would like to request a quote from Exprado Trading & Contracting Co.")}`}
@@ -86,7 +87,7 @@ export default function Hero({ navigateTo }) {
                 className="button button-secondary button-large"
               >
                 <Phone size={18} />
-                Request a Quote
+                {t("Hero.requestQuote")}
               </a>
             </div>
           </div>
@@ -129,31 +130,31 @@ export default function Hero({ navigateTo }) {
         <div className="container">
           <form className="conversion-form-grid" onSubmit={handleInquirySubmit}>
             <div className="form-group">
-              <label>Your Name *</label>
+              <label>{t("Hero.form.yourName")}</label>
               <input
                 type="text"
                 name="name"
                 value={inquiryData.name}
                 onChange={handleInputChange}
-                placeholder="Full Name"
+                placeholder={t("Hero.form.fullName")}
                 required
               />
             </div>
 
             <div className="form-group">
-              <label>Phone / WhatsApp *</label>
+              <label>{t("Hero.form.phone")}</label>
               <input
                 type="tel"
                 name="phone"
                 value={inquiryData.phone}
                 onChange={handleInputChange}
-                placeholder="+966 XXXXXXXXX"
+                placeholder={t("Hero.form.phonePlaceholder")}
                 required
               />
             </div>
 
             <div className="form-group">
-              <label>Service Needed *</label>
+              <label>{t("Hero.form.serviceNeeded")}</label>
               <select
                 name="service"
                 value={inquiryData.service}
@@ -161,28 +162,28 @@ export default function Hero({ navigateTo }) {
                 required
               >
                 <option value="" disabled>
-                  Select Service Division
+                  {t("Hero.form.selectService")}
                 </option>
-                <option value="Civil Construction & Infrastructure">Civil Construction & Infrastructure</option>
-                <option value="Electrical & Instrumentation">Electrical & Instrumentation (E&I)</option>
-                <option value="Mechanical & Steel Fabrication">Mechanical & Steel Fabrication</option>
-                <option value="Asphalt & Paving">Asphalt & Paving Contracting</option>
-                <option value="Scaffolding & Structural Support">Scaffolding & Structural Support</option>
-                <option value="Waterproofing">Waterproofing</option>
-                <option value="Equipment & Logistics">Equipment & Logistics Support</option>
-                <option value="Technical Manpower & Trading">Technical Manpower & Trading</option>
-                <option value="General Inquiry">General Inquiry</option>
+                <option value="Civil Construction & Infrastructure">{t("Hero.form.services.civil")}</option>
+                <option value="Electrical & Instrumentation">{t("Hero.form.services.electrical")}</option>
+                <option value="Mechanical & Steel Fabrication">{t("Hero.form.services.mechanical")}</option>
+                <option value="Asphalt & Paving">{t("Hero.form.services.asphalt")}</option>
+                <option value="Scaffolding & Structural Support">{t("Hero.form.services.scaffolding")}</option>
+                <option value="Waterproofing">{t("Hero.form.services.waterproofing")}</option>
+                <option value="Equipment & Logistics">{t("Hero.form.services.equipment")}</option>
+                <option value="Technical Manpower & Trading">{t("Hero.form.services.manpower")}</option>
+                <option value="General Inquiry">{t("Hero.form.services.general")}</option>
               </select>
             </div>
 
             <div className="form-group">
-              <label>Brief Description</label>
+              <label>{t("Hero.form.briefDescription")}</label>
               <input
                 type="text"
                 name="message"
                 value={inquiryData.message}
                 onChange={handleInputChange}
-                placeholder="Brief project description..."
+                placeholder={t("Hero.form.briefPlaceholder")}
               />
             </div>
 
@@ -191,7 +192,7 @@ export default function Hero({ navigateTo }) {
                 type="submit"
                 className="button button-primary"
               >
-                SEND INQUIRY
+                {t("Hero.form.sendInquiry")}
               </button>
             </div>
           </form>

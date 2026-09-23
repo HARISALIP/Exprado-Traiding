@@ -1,2 +1,94 @@
 {
+  "TopBar": {
+    "contactOnWhatsapp": "Contact on WhatsApp",
+    "tagline": "100% Saudi Owned · Vision 2030 Aligned"
+  },
+  "Navbar": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "ourServices": "Our Services",
+    "contact": "Contact",
+    "requestQuote": "Request Quote",
+    "viewMore": "View More ▼",
+    "viewLess": "View Less ▲",
+    "civilStructural": "Civil & Structural",
+    "technicalTrades": "Technical & Trades",
+    "supportServices": "Support Services"
+  },
+  "Hero": {
+    "eyebrow": "100% Saudi Owned · 10+ Years Engineering Expertise",
+    "titleBuilding": "Building",
+    "titleKSA": " KSA's",
+    "titleInfrastructure": "Infrastructure",
+    "titleFuture": "Future",
+    "description": "EXPRADO TRADING & CONTRACTING CO. provides engineering, civil construction, electro-mechanical, and industrial trading solutions delivered across the Kingdom of Saudi Arabia. Aligned with Saudi Vision 2030.",
+    "exploreServices": "Explore Services",
+    "requestQuote": "Request a Quote",
+    "form": {
+      "yourName": "Your Name *",
+      "fullName": "Full Name",
+      "phone": "Phone / WhatsApp *",
+      "phonePlaceholder": "+966 XXXXXXXXX",
+      "serviceNeeded": "Service Needed *",
+      "selectService": "Select Service Division",
+      "briefDescription": "Brief Description",
+      "briefPlaceholder": "Brief project description...",
+      "sendInquiry": "SEND INQUIRY",
+      "services": {
+        "civil": "Civil Construction & Infrastructure",
+        "electrical": "Electrical & Instrumentation (E&I)",
+        "mechanical": "Mechanical & Steel Fabrication",
+        "asphalt": "Asphalt & Paving Contracting",
+        "scaffolding": "Scaffolding & Structural Support",
+        "waterproofing": "Waterproofing",
+        "equipment": "Equipment & Logistics Support",
+        "manpower": "Technical Manpower & Trading",
+        "general": "General Inquiry"
+      }
+    }
+  },
+  "Footer": {
+    "tradingCo": "Trading & Contracting Co.",
+    "description": "A 100% Saudi-owned engineering and contracting company executing multidisciplinary infrastructure, industrial, and commercial projects across the Kingdom of Saudi Arabia. Aligned with Saudi Vision 2030.",
+    "quickLinks": "Quick Links",
+    "serviceDivisions": "Service Divisions",
+    "contactUs": "Contact Us",
+    "whatsappChat": "WhatsApp Chat",
+    "saudiOwned": "🇸🇦 100% Saudi Owned\nVision 2030 Aligned",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions",
+    "copyright": "Copyright © {{year}} EXPRADO TRADING & CONTRACTING CO. All rights reserved.",
+    "designedBy": "Designed & Developed by"
+  },
+  "WhyChooseUs": {
+    "eyebrow": "WHY CHOOSE US",
+    "titleLine1": "Your Project,",
+    "titleLine2": "Our Commitment",
+    "description": "EXPRADO TRADING & CONTRACTING CO. is a 100% Saudi-owned enterprise executing multidisciplinary infrastructure, industrial, and commercial projects across the Kingdom. Our integrated service model ensures every project benefits from civil, electrical, and mechanical expertise — all under one responsible contractor.",
+    "visionAligned": "Vision 2030 Aligned",
+    "features": [
+      {
+        "title": "100% Local Value & Quality",
+        "description": "A fully Saudi-owned enterprise delivering engineering excellence aligned with Vision 2030."
+      },
+      {
+        "title": "Safety-First Approach",
+        "description": "Strict site safety standards across all divisions, including certified scaffold inspection and compliance."
+      },
+      {
+        "title": "Multidisciplinary Capability",
+        "description": "Eight integrated service divisions covering civil, electrical, mechanical, and trading under one contractor."
+      },
+      {
+        "title": "Kingdom-Wide Operations",
+        "description": "Executing infrastructure, industrial, and commercial projects across the Kingdom of Saudi Arabia."
+      }
+    ],
+    "stats": [
+      { "label": "Saudi Owned" },
+      { "label": "Years Engineering Expertise" },
+      { "label": "Service Divisions" },
+      { "label": "Kingdom-Wide Operations" }
+    ]
+  }
 }

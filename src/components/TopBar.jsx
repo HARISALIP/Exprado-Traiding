@@ -1,8 +1,10 @@
 import { Phone, Mail, Globe } from "lucide-react";
 import { WhatsAppIconSVG } from "./Icons";
 import { contactInfo } from "../assets/siteData";
+import { useTranslation } from "react-i18next";
 
 export default function TopBar() {
+  const { t } = useTranslation();
   return (
     <div className="topbar">
       <div className="container topbar-inner">
@@ -32,10 +34,10 @@ export default function TopBar() {
             rel="noopener noreferrer"
           >
             <WhatsAppIconSVG size={13} />
-            Contact on WhatsApp
+            {t("TopBar.contactOnWhatsapp")}
           </a>
           <div style={{ fontSize: "0.8rem", opacity: 0.75 }}>
-            100% Saudi Owned · Vision 2030 Aligned
+            {t("TopBar.tagline")}
           </div>
         </div>
       </div>

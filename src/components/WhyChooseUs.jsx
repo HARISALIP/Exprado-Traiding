@@ -1,7 +1,9 @@
 import { whyChooseItems, stats } from "../assets/siteData";
 import SectionHeading from "./SectionHeading";
+import { useTranslation } from "react-i18next";
 
 export default function WhyChooseUs() {
+  const { t } = useTranslation();
   return (
     <section className="section" style={{ background: "white", padding: "6rem 0" }}>
       <div className="container">
@@ -9,7 +11,7 @@ export default function WhyChooseUs() {
           {/* Left: text content */}
           <div>
             <span className="eyebrow" style={{ color: "var(--gold)" }}>
-              WHY CHOOSE US
+              {t("WhyChooseUs.eyebrow")}
             </span>
             <h2
               style={{
@@ -22,9 +24,9 @@ export default function WhyChooseUs() {
                 letterSpacing: "-0.02em",
               }}
             >
-              Your Project,
+              {t("WhyChooseUs.titleLine1")}
               <br />
-              Our Commitment
+              {t("WhyChooseUs.titleLine2")}
             </h2>
             <p
               style={{
@@ -34,10 +36,7 @@ export default function WhyChooseUs() {
                 lineHeight: "1.7",
               }}
             >
-              EXPRADO TRADING & CONTRACTING CO. is a 100% Saudi-owned enterprise executing
-              multidisciplinary infrastructure, industrial, and commercial projects across the Kingdom.
-              Our integrated service model ensures every project benefits from civil, electrical, and
-              mechanical expertise — all under one responsible contractor.
+              {t("WhyChooseUs.description")}
             </p>
 
             <div className="why-features">
@@ -49,8 +48,8 @@ export default function WhyChooseUs() {
                       <Icon size={22} />
                     </div>
                     <div className="why-feature-text">
-                      <h4>{item.title}</h4>
-                      <p>{item.description}</p>
+                      <h4>{t(`WhyChooseUs.features.${idx}.title`)}</h4>
+                      <p>{t(`WhyChooseUs.features.${idx}.description`)}</p>
                     </div>
                   </div>
                 );
@@ -116,7 +115,7 @@ export default function WhyChooseUs() {
                       lineHeight: "1.5",
                     }}
                   >
-                    {stat.label}
+                    {t(`WhyChooseUs.stats.${idx}.label`)}
                   </p>
                 </div>
               ))}
@@ -146,7 +145,7 @@ export default function WhyChooseUs() {
               }}
             >
               <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--navy)", boxShadow: "0 0 10px var(--navy)" }} />
-              Vision 2030 Aligned
+              {t("WhyChooseUs.visionAligned")}
             </div>
           </div>
         </div>

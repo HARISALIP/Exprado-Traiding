@@ -123,10 +123,10 @@ export default function Navbar({ navigateTo }) {
           </div>
 
           <a href="#home" onClick={() => handleNavigate("home")}>
-            Home
+            {t("Navbar.home")}
           </a>
           <a href="#about" onClick={() => handleNavigate("about")}>
-            About Us
+            {t("Navbar.aboutUs")}
           </a>
 
           {/* Services dropdown */}
@@ -134,12 +134,12 @@ export default function Navbar({ navigateTo }) {
             className={`nav-dropdown ${isDropdownOpen ? "dropdown-open" : ""}`}
           >
             <button className="dropdown-trigger" onClick={toggleDropdown}>
-              Our Services{" "}
+              {t("Navbar.ourServices")}{" "}
               <ArrowRight size={15} className="chevron" />
             </button>
             <div className="dropdown-content">
               <div className="dropdown-group">
-                <h4>Civil & Structural</h4>
+                <h4>{t("Navbar.civilStructural")}</h4>
                 {col1.map((item) => (
                   <a
                     key={item.title}
@@ -152,7 +152,7 @@ export default function Navbar({ navigateTo }) {
               </div>
               <div className={`mobile-extra-services ${showMoreServices ? "expanded" : ""}`}>
                 <div className="dropdown-group">
-                  <h4>Technical & Trades</h4>
+                  <h4>{t("Navbar.technicalTrades")}</h4>
                   {col2.map((item) => (
                     <a
                       key={item.title}
@@ -164,7 +164,7 @@ export default function Navbar({ navigateTo }) {
                   ))}
                 </div>
                 <div className="dropdown-group">
-                  <h4>Support Services</h4>
+                  <h4>{t("Navbar.supportServices")}</h4>
                   {col3.map((item) => (
                     <a
                       key={item.title}
@@ -184,7 +184,7 @@ export default function Navbar({ navigateTo }) {
                   setShowMoreServices(!showMoreServices);
                 }}
               >
-                {showMoreServices ? "View Less ▲" : "View More ▼"}
+                {showMoreServices ? t("Navbar.viewLess") : t("Navbar.viewMore")}
               </button>
             </div>
           </div>
@@ -222,7 +222,7 @@ export default function Navbar({ navigateTo }) {
             rel="noopener noreferrer"
             onClick={handleClose}
           >
-            Request Quote <ArrowRight size={17} className="icon-move" />
+            {t("Navbar.requestQuote")} <ArrowRight size={17} className="icon-move" />
           </a>
           </div>
         </div>

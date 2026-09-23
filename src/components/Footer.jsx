@@ -2,8 +2,10 @@ import { Phone, Globe, Mail, MapPin } from "lucide-react";
 import { contactInfo } from "../assets/siteData";
 import { WhatsAppIconSVG } from "./Icons";
 import { LinkedInIcon } from "./Icons";
+import { useTranslation } from "react-i18next";
 
 export default function Footer({ navigateTo }) {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -40,13 +42,11 @@ export default function Footer({ navigateTo }) {
                   marginTop: "2px",
                 }}
               >
-                Trading & Contracting Co.
+                {t("Footer.tradingCo")}
               </div>
             </a>
             <p>
-              A 100% Saudi-owned engineering and contracting company executing
-              multidisciplinary infrastructure, industrial, and commercial projects
-              across the Kingdom of Saudi Arabia. Aligned with Saudi Vision 2030.
+              {t("Footer.description")}
             </p>
 
             <div className="footer-contact-list" style={{ marginTop: "1.5rem" }}>
@@ -79,35 +79,35 @@ export default function Footer({ navigateTo }) {
 
           {/* Quick Links */}
           <div>
-            <h3>Quick Links</h3>
+            <h3>{t("Footer.quickLinks")}</h3>
             <ul className="footer-links">
-              <li><a href="#home" onClick={(e) => { e.preventDefault(); navigateTo("home"); }}>Home</a></li>
-              <li><a href="#about" onClick={(e) => { e.preventDefault(); navigateTo("about"); }}>About Us</a></li>
-              <li><a href="#services" onClick={(e) => { e.preventDefault(); navigateTo("services"); }}>Our Services</a></li>
-              <li><a href="#contact" onClick={(e) => { e.preventDefault(); navigateTo("contact"); }}>Contact</a></li>
-              <li><a href="#privacy" onClick={(e) => { e.preventDefault(); navigateTo("privacy"); }}>Privacy Policy</a></li>
-              <li><a href="#terms" onClick={(e) => { e.preventDefault(); navigateTo("terms"); }}>Terms & Conditions</a></li>
+              <li><a href="#home" onClick={(e) => { e.preventDefault(); navigateTo("home"); }}>{t("Navbar.home")}</a></li>
+              <li><a href="#about" onClick={(e) => { e.preventDefault(); navigateTo("about"); }}>{t("Navbar.aboutUs")}</a></li>
+              <li><a href="#services" onClick={(e) => { e.preventDefault(); navigateTo("services"); }}>{t("Navbar.ourServices")}</a></li>
+              <li><a href="#contact" onClick={(e) => { e.preventDefault(); navigateTo("contact"); }}>{t("Navbar.contact")}</a></li>
+              <li><a href="#privacy" onClick={(e) => { e.preventDefault(); navigateTo("privacy"); }}>{t("Footer.privacyPolicy")}</a></li>
+              <li><a href="#terms" onClick={(e) => { e.preventDefault(); navigateTo("terms"); }}>{t("Footer.termsConditions")}</a></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3>Service Divisions</h3>
+            <h3>{t("Footer.serviceDivisions")}</h3>
             <ul className="footer-links">
-              <li>Civil Construction</li>
-              <li>Electrical & Instrumentation</li>
-              <li>Mechanical & Steel</li>
-              <li>Asphalt & Paving</li>
-              <li>Scaffolding & Support</li>
-              <li>Waterproofing</li>
-              <li>Equipment & Logistics</li>
-              <li>Manpower & Trading</li>
+              <li>{t("Hero.form.services.civil")}</li>
+              <li>{t("Hero.form.services.electrical")}</li>
+              <li>{t("Hero.form.services.mechanical")}</li>
+              <li>{t("Hero.form.services.asphalt")}</li>
+              <li>{t("Hero.form.services.scaffolding")}</li>
+              <li>{t("Hero.form.services.waterproofing")}</li>
+              <li>{t("Hero.form.services.equipment")}</li>
+              <li>{t("Hero.form.services.manpower")}</li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3>Contact Us</h3>
+            <h3>{t("Footer.contactUs")}</h3>
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
               <a
                 href={`https://wa.me/${contactInfo.whatsapp}?text=${encodeURIComponent("Hello EXPRADO, I have an inquiry.")}`}
@@ -144,9 +144,10 @@ export default function Footer({ navigateTo }) {
                   color: "var(--navy)",
                   fontWeight: "600",
                   textAlign: "center",
+                  whiteSpace: "pre-line"
                 }}
               >
-                🇸🇦 100% Saudi Owned<br />Vision 2030 Aligned
+                {t("Footer.saudiOwned")}
               </div>
             </div>
           </div>
@@ -156,20 +157,20 @@ export default function Footer({ navigateTo }) {
         <div className="footer-bottom">
           <div className="footer-bottom-links">
             <a href="#privacy" onClick={(e) => { e.preventDefault(); navigateTo("privacy"); }}>
-              Privacy Policy
+              {t("Footer.privacyPolicy")}
             </a>
             <span className="divider">|</span>
             <a href="#terms" onClick={(e) => { e.preventDefault(); navigateTo("terms"); }}>
-              Terms & Conditions
+              {t("Footer.termsConditions")}
             </a>
             <span className="divider">|</span>
             <a href="#services" onClick={() => navigateTo("services")}>
-              Our Services
+              {t("Navbar.ourServices")}
             </a>
           </div>
           <p style={{ textAlign: "inherit" }}>
-            Copyright © {currentYear} EXPRADO TRADING & CONTRACTING CO. All rights reserved.<br/>
-            Designed & Developed by <a href="https://skillspot.in" target="_blank" rel="noopener noreferrer" style={{ color: "var(--gold)", fontWeight: "600" }}>skillspot.in</a>
+            {t("Footer.copyright", { year: currentYear })}<br/>
+            {t("Footer.designedBy")} <a href="https://skillspot.in" target="_blank" rel="noopener noreferrer" style={{ color: "var(--gold)", fontWeight: "600" }}>skillspot.in</a>
           </p>
         </div>
       </div>
