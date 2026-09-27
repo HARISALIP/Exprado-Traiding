@@ -89,7 +89,7 @@ export const serviceItems = [
     title: "Scaffolding & Structural Support",
     description: "Safe, certified scaffolding systems for high-rise and industrial sites, built around strict site safety standards.",
     icon: HardHat,
-    image: "https://images.unsplash.com/photo-1533555307049-74d30c5e317e?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1531834685032-c906ea40ddd8?auto=format&fit=crop&w=1600&q=80",
     subItems: [
       "System Scaffolding Supply & Assembly",
       "High-Rise & Industrial Support",
@@ -115,7 +115,7 @@ export const serviceItems = [
     title: "Equipment & Logistics Support",
     description: "Heavy machinery fleet and flexible project logistics supporting complex construction operations.",
     icon: Truck,
-    image: "https://images.unsplash.com/photo-1579739761408-5f21226500ab?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1541888086915-0b043134fb33?auto=format&fit=crop&w=1600&q=80",
     subItems: [
       "Excavators, Wheel Loaders & Dozers",
       "Rollers, Mobile Cranes & Trailers",
