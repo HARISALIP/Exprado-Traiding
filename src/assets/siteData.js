@@ -77,7 +77,7 @@ export const serviceItems = [
     title: "Asphalt & Paving Contracting",
     description: "Highway paving, industrial yard surfacing, and surface maintenance across the Kingdom.",
     icon: Layers,
-    image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.pexels.com/photos/1769344/pexels-photo-1769344.jpeg?auto=compress&cs=tinysrgb&w=800",
     subItems: [
       "Highway & Main Road Paving",
       "Industrial Parking & Yard Surfacing",
@@ -89,7 +89,7 @@ export const serviceItems = [
     title: "Scaffolding & Structural Support",
     description: "Safe, certified scaffolding systems for high-rise and industrial sites, built around strict site safety standards.",
     icon: HardHat,
-    image: "https://images.unsplash.com/photo-1531834685032-c906ea40ddd8?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.pexels.com/photos/176342/pexels-photo-176342.jpeg?auto=compress&cs=tinysrgb&w=800",
     subItems: [
       "System Scaffolding Supply & Assembly",
       "High-Rise & Industrial Support",
@@ -115,7 +115,7 @@ export const serviceItems = [
     title: "Equipment & Logistics Support",
     description: "Heavy machinery fleet and flexible project logistics supporting complex construction operations.",
     icon: Truck,
-    image: "https://images.unsplash.com/photo-1541888086915-0b043134fb33?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.pexels.com/photos/1238864/pexels-photo-1238864.jpeg?auto=compress&cs=tinysrgb&w=800",
     subItems: [
       "Excavators, Wheel Loaders & Dozers",
       "Rollers, Mobile Cranes & Trailers",
@@ -127,7 +127,7 @@ export const serviceItems = [
     title: "Technical Manpower & Trading",
     description: "Certified technical personnel across all disciplines, plus industrial material sourcing and trading.",
     icon: Users,
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.pexels.com/photos/585418/pexels-photo-585418.jpeg?auto=compress&cs=tinysrgb&w=800",
     subItems: [
       "Civil, Electrical & Mechanical Engineers",
       "Safety Officers & Skilled Labor",
