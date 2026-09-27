@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 // Construction/engineering hero images from Unsplash (clearly labeled as reference images)
 const heroImages = [
-  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80",
+  "/exprado.jpeg",
   "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80",
   "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1600&q=80",
 ];

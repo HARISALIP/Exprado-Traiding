@@ -25,9 +25,12 @@ export default function Services({ navigateTo }) {
             {displayedItems.slice(0, midPoint).map((item) => {
               const Icon = item.icon;
               return (
-                <article key={item.title} className="service-item-horizontal">
-                  <div className="service-icon-small">
-                    <Icon size={22} />
+                <article key={item.title} className="service-item-horizontal" style={{ gap: '1.25rem', alignItems: 'flex-start' }}>
+                  <div style={{ width: '90px', height: '90px', flexShrink: 0, borderRadius: 'var(--radius-md)', overflow: 'hidden', position: 'relative', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+                    <img src={item.image} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(to bottom right, rgba(13, 33, 55, 0.6), rgba(13, 33, 55, 0.8))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                       <Icon size={26} color="var(--gold)" />
+                    </div>
                   </div>
                   <div className="service-text">
                     <div className="service-number">{t("Services.division")} {item.division}</div>
@@ -51,9 +54,12 @@ export default function Services({ navigateTo }) {
             {displayedItems.slice(midPoint).map((item) => {
               const Icon = item.icon;
               return (
-                <article key={item.title} className="service-item-horizontal">
-                  <div className="service-icon-small">
-                    <Icon size={22} />
+                <article key={item.title} className="service-item-horizontal" style={{ gap: '1.25rem', alignItems: 'flex-start' }}>
+                  <div style={{ width: '90px', height: '90px', flexShrink: 0, borderRadius: 'var(--radius-md)', overflow: 'hidden', position: 'relative', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+                    <img src={item.image} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(to bottom right, rgba(13, 33, 55, 0.6), rgba(13, 33, 55, 0.8))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                       <Icon size={26} color="var(--gold)" />
+                    </div>
                   </div>
                   <div className="service-text">
                     <div className="service-number">{t("Services.division")} {item.division}</div>

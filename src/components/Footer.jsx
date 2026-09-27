@@ -20,30 +20,8 @@ export default function Footer({ navigateTo }) {
               style={{ display: "inline-block", marginBottom: "1.25rem", textDecoration: "none" }}
               aria-label="Exprado — Home"
             >
-              {/* Text logo — replace with <img> when actual logo is available */}
-              <div
-                style={{
-                  fontFamily: "'Barlow', 'Inter', sans-serif",
-                  fontSize: "1.5rem",
-                  fontWeight: "900",
-                  letterSpacing: "-0.02em",
-                  color: "var(--navy)",
-                }}
-              >
-                EX<span style={{ color: "var(--gold)" }}>PRADO</span>
-              </div>
-              <div
-                style={{
-                  fontSize: "0.65rem",
-                  fontWeight: "700",
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  color: "var(--navy)",
-                  marginTop: "2px",
-                }}
-              >
-                {t("Footer.tradingCo")}
-              </div>
+              {/* Logo image */}
+              <img src="/expradologo.jpeg" alt="EXPRADO Logo" style={{ height: "65px", objectFit: "contain" }} />
             </a>
             <p>
               {t("Footer.description")}

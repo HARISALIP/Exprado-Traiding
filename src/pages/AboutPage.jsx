@@ -95,46 +95,17 @@ export default function AboutPage({ navigateTo }) {
           {/* Who We Are — split layout */}
           <div className="about-split-grid" style={{ marginTop: "5rem" }}>
             <div>
-              {/* Construction image — replace with actual company image when available */}
-              <div
-                className="placeholder-box"
+              <img 
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80" 
+                alt="Exprado Team at Construction Site" 
                 style={{
+                  width: "100%",
                   height: "420px",
+                  objectFit: "cover",
                   borderRadius: "var(--radius-lg)",
-                  background: "linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%)",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "1rem",
-                  border: "2px dashed rgba(232, 134, 26, 0.4)",
-                  color: "rgba(255,255,255,0.5)",
-                  fontSize: "0.9rem",
-                  textAlign: "center",
-                  padding: "2rem",
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
                 }}
-              >
-                <div
-                  style={{
-                    width: "80px",
-                    height: "80px",
-                    background: "rgba(232, 134, 26, 0.15)",
-                    borderRadius: "50%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "var(--gold)",
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  <svg width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <polyline points="21 15 16 10 5 21" />
-                  </svg>
-                </div>
-                [Add Company / Project Photography Here]
-              </div>
+              />
             </div>
 
             <div>

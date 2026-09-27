@@ -38,25 +38,34 @@ export default function ServicesPage({ navigateTo }) {
             {serviceItems.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="division-card">
-                  <div className="division-card-header">
-                    <div className="division-card-icon">
-                      <Icon size={28} />
-                    </div>
-                    <div className="division-card-title">
-                      <span>{t("Services.division")} {item.division}</span>
-                      <h3>{t(`Services.items.${parseInt(item.division)-1}.title`)}</h3>
-                    </div>
+                <div key={item.title} className="division-card" style={{ padding: 0, overflow: 'hidden' }}>
+                  <div style={{ width: "100%", height: "200px", overflow: "hidden" }}>
+                    <img 
+                      src={item.image} 
+                      alt={item.title} 
+                      style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s ease" }} 
+                    />
                   </div>
-                  <div className="division-card-body">
-                    <p>{t(`Services.items.${parseInt(item.division)-1}.description`)}</p>
-                    <div className="division-sub-items">
-                      {[0, 1, 2].map((subIdx) => (
-                        <div key={subIdx} className="division-sub-item">
-                          <CheckCircle size={16} className="division-sub-icon" />
-                          <span>{t(`Services.items.${parseInt(item.division)-1}.subItems.${subIdx}`)}</span>
-                        </div>
-                      ))}
+                  <div style={{ padding: "1.5rem" }}>
+                    <div className="division-card-header" style={{ marginBottom: "1rem" }}>
+                      <div className="division-card-icon">
+                        <Icon size={28} />
+                      </div>
+                      <div className="division-card-title">
+                        <span>{t("Services.division")} {item.division}</span>
+                        <h3 style={{ fontSize: "1.2rem", marginTop: "0.2rem" }}>{t(`Services.items.${parseInt(item.division)-1}.title`)}</h3>
+                      </div>
+                    </div>
+                    <div className="division-card-body">
+                      <p>{t(`Services.items.${parseInt(item.division)-1}.description`)}</p>
+                      <div className="division-sub-items" style={{ marginTop: "1rem" }}>
+                        {[0, 1, 2].map((subIdx) => (
+                          <div key={subIdx} className="division-sub-item">
+                            <CheckCircle size={16} className="division-sub-icon" />
+                            <span>{t(`Services.items.${parseInt(item.division)-1}.subItems.${subIdx}`)}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

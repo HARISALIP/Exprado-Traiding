@@ -41,6 +41,7 @@ export const serviceItems = [
     title: "Civil Construction & Infrastructure",
     description: "Delivering robust civil works from residential and commercial buildings to industrial foundations across KSA.",
     icon: Building2,
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80",
     subItems: [
       "Residential & Commercial Construction",
       "Industrial Foundations & Earthworks",
@@ -52,6 +53,7 @@ export const serviceItems = [
     title: "Electrical & Instrumentation (E&I)",
     description: "Comprehensive electrical and instrumentation solutions for industrial and commercial facilities.",
     icon: Zap,
+    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1600&q=80",
     subItems: [
       "Power Distribution Systems",
       "Process Instrumentation",
@@ -63,6 +65,7 @@ export const serviceItems = [
     title: "Mechanical & Steel Fabrication",
     description: "Structural steel erection, industrial piping, HVAC, and mechanical plant support services.",
     icon: Wrench,
+    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=80",
     subItems: [
       "Structural Steel Erection",
       "Industrial Piping & HVAC",
@@ -74,6 +77,7 @@ export const serviceItems = [
     title: "Asphalt & Paving Contracting",
     description: "Highway paving, industrial yard surfacing, and surface maintenance across the Kingdom.",
     icon: Layers,
+    image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?auto=format&fit=crop&w=1600&q=80",
     subItems: [
       "Highway & Main Road Paving",
       "Industrial Parking & Yard Surfacing",
@@ -85,6 +89,7 @@ export const serviceItems = [
     title: "Scaffolding & Structural Support",
     description: "Safe, certified scaffolding systems for high-rise and industrial sites, built around strict site safety standards.",
     icon: HardHat,
+    image: "https://images.unsplash.com/photo-1533555307049-74d30c5e317e?auto=format&fit=crop&w=1600&q=80",
     subItems: [
       "System Scaffolding Supply & Assembly",
       "High-Rise & Industrial Support",
@@ -96,6 +101,7 @@ export const serviceItems = [
     title: "Waterproofing",
     description: "Complete waterproofing solutions from wet areas and basements to foundations and crack repairs.",
     icon: Droplets,
+    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80",
     subItems: [
       "Toilet & Wet Area Waterproofing",
       "Basement & Foundation Waterproofing",
@@ -109,6 +115,7 @@ export const serviceItems = [
     title: "Equipment & Logistics Support",
     description: "Heavy machinery fleet and flexible project logistics supporting complex construction operations.",
     icon: Truck,
+    image: "https://images.unsplash.com/photo-1579739761408-5f21226500ab?auto=format&fit=crop&w=1600&q=80",
     subItems: [
       "Excavators, Wheel Loaders & Dozers",
       "Rollers, Mobile Cranes & Trailers",
@@ -120,6 +127,7 @@ export const serviceItems = [
     title: "Technical Manpower & Trading",
     description: "Certified technical personnel across all disciplines, plus industrial material sourcing and trading.",
     icon: Users,
+    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80",
     subItems: [
       "Civil, Electrical & Mechanical Engineers",
       "Safety Officers & Skilled Labor",
@@ -168,6 +176,6 @@ export const contactInfo = {
   phone: "+966 563189556",
   whatsapp: "+966563189556",
   website: "www.exprado.com",
-  email: "[Company Email]",       // Not in PDF — placeholder
-  address: "[Office Address]",    // Not in PDF — placeholder
+  email: "info@exprado.com",
+  address: "Kingdom of Saudi Arabia",
 };

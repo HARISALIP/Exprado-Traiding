@@ -77,13 +77,8 @@ export default function Navbar({ navigateTo }) {
           onClick={() => handleNavigate("home")}
           aria-label="Exprado Trading & Contracting Co. — Home"
         >
-          {/* Text-based logo — replace with <img> when real logo is available */}
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <div className="brand-logo-text">
-              EX<span>PRADO</span>
-            </div>
-            <span className="brand-tagline">Trading & Contracting Co.</span>
-          </div>
+          {/* Logo image */}
+          <img src="/expradologo.jpeg" alt="EXPRADO Logo" style={{ height: "55px", objectFit: "contain" }} />
         </a>
 
         {/* Mobile menu toggle */}
@@ -111,12 +106,7 @@ export default function Navbar({ navigateTo }) {
         <div className={`nav-links ${isOpen ? "open" : ""}`}>
           {/* Mobile header */}
           <div className="mobile-menu-header">
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <div className="brand-logo-text" style={{ fontSize: "1.3rem" }}>
-                EX<span style={{ color: "var(--gold)" }}>PRADO</span>
-              </div>
-              <span className="brand-tagline" style={{ fontSize: "0.55rem" }}>Trading & Contracting Co.</span>
-            </div>
+            <img src="/expradologo.jpeg" alt="EXPRADO Logo" style={{ height: "45px", objectFit: "contain" }} />
             <button type="button" className="close-menu" onClick={handleClose}>
               <X size={22} />
             </button>
